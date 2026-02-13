@@ -29,6 +29,6 @@ async function initialize() {
         host: HOST,
     });
 
-   
+    db.Category = require("../models/category.model")(sequelize);
     await sequelize.sync({ alter: true });
 }
